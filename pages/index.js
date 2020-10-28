@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Date from '../components/date'
+import linkHeaderStyles from '../styles/linkHeader.module.css'
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from '../lib/posts'
 
@@ -17,18 +18,20 @@ export default function Home({ allPostsData }) {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Jon's Journies</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <h1 className="title">
-          Read{" "}
-          <Link href="/posts/first-post">
-            <a>this page!</a>
-          </Link>
-        </h1>
-      </main>
+      <header>
+        <h2>
+          Jon's Journies
+        </h2>
+      </header>
+      
+      <section className={linkHeaderStyles.container}>
+          <Link href='/posts/projects'><a>Projects</a></Link>
+          <Link href='http://www.github.com/jclasley'><a>Github</a></Link>
+          <Link href='/posts/about'><a>About</a></Link>
+      </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
