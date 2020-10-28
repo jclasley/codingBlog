@@ -21,13 +21,14 @@ export default function Home({ allPostsData }) {
         <title>Jon's Journies</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <h2>
-          Jon's Journies
-        </h2>
-      </header>
       
-      <section className={linkHeaderStyles.container}>
+     
+        <header className='title'>
+          <h3>
+            Jon's Journies
+          </h3>
+        </header>
+       <section className={linkHeaderStyles.container}>
           <Link href='/projects'><a>Projects</a></Link>
           <Link href='https://www.github.com/jclasley'><a>Github</a></Link>
           <Link href='/about'><a>About</a></Link>
@@ -52,7 +53,6 @@ export default function Home({ allPostsData }) {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -108,6 +108,8 @@ export default function Home({ allPostsData }) {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
+          grid-row: 1;
+          grid-column: 2;
         }
 
         .title,
