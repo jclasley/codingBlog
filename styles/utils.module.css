@@ -44,10 +44,29 @@
   margin: 0;
 }
 
-.listItem {
-  margin: 0 0 1.25rem;
-}
-
 .lightText {
   color: #999;
+}
+
+.excerpt {
+  color: black;
+  font-size: 0.8rem;
+  line-height: normal;
+}
+
+.cardHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  display: flex;
+  width: 25%;
+  margin: 1rem;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(250, 255, 255);
+  opacity: 1;
 }

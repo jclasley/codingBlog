@@ -2,9 +2,7 @@
 title: 'Recurisvely cursing'
 date: '2020-10-28'
 ---
-
 ### Recursion is weird
-
 Prior to starting this course, I thought myself a realtively seasoned developer, capable of doing all sorts of tasks. Prior to starting this course, I had never heard of recursion.
 
 It took many, many attempts to wrap my head around the recurisve `return` statements. What the **hell** was going on? I voiced my issues with a fellow pre-course classmate, with whom I had develoepd a friendly rapport (and who was way smarter than me). Thank god I did, because his response saved me likely hours of headache trying to understand the concept. *"Recursion is just iterating using the stack instead of an iterator."*

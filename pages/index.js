@@ -20,6 +20,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Jon's Journies</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
       
      
@@ -28,7 +29,7 @@ export default function Home({ allPostsData }) {
             Jon's Journies
           </h3>
         </header>
-       <section className={linkHeaderStyles.container}>
+       <section className={`linkbar ${linkHeaderStyles.container}`}>
           <Link href='/projects'><a>Projects</a></Link>
           <Link href='https://www.github.com/jclasley'><a>Github</a></Link>
           <Link href='/about'><a>About</a></Link>
@@ -36,19 +37,25 @@ export default function Home({ allPostsData }) {
 
       <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog posts</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+        <div className={utilStyles.cardHolder}>
+          {allPostsData.map(({ id, date, title, excerpt }) => (
+            <div className={utilStyles.card} key={id}>
+              <div className={utilStyles.listItem}>
+                <Link href={`/posts/${id}`}>
+                  <a>{title}</a>
+                </Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
+                <br />
+                <p className={utilStyles.excerpt}>
+                  {excerpt}
+                </p>
+              </div>
+              </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <style jsx>{`
