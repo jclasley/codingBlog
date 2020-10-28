@@ -28,13 +28,13 @@ export default function Home({ allPostsData }) {
       </header>
       
       <section className={linkHeaderStyles.container}>
-          <Link href='/posts/projects'><a>Projects</a></Link>
-          <Link href='http://www.github.com/jclasley'><a>Github</a></Link>
-          <Link href='/posts/about'><a>About</a></Link>
+          <Link href='/projects'><a>Projects</a></Link>
+          <Link href='https://www.github.com/jclasley'><a>Github</a></Link>
+          <Link href='/about'><a>About</a></Link>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+      <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
