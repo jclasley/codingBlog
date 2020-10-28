@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 const name = "Jon Lasley";
-export const siteTitle = "Jon's Journies";
+export const siteTitle = "Jon's Journeys";
 
 export default function Layout({ children, home }) {
   return (

@@ -18,14 +18,14 @@ export default function Home({ allPostsData }) {
   return (
     <div className="container">
       <Head>
-        <title>Jon's Journies</title>
+        <title>Jon's Journeys</title>
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
       
      
         <header className='title'>
           <h3>
-            Jon's Journies
+            Jon's Journeys
           </h3>
         </header>
        <section className={`linkbar ${linkHeaderStyles.container}`}>
