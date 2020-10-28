@@ -19,7 +19,6 @@ export default function Home({ allPostsData }) {
     <div className="container">
       <Head>
         <title>Jon's Journies</title>
-        <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
       </Head>
       
