@@ -40,7 +40,7 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.cardHolder}>
           {allPostsData.map(({ id, date, title, excerpt }) => (
             <div className={utilStyles.card} key={id}>
-              <div className={utilStyles.listItem}>
+              <div className={utilStyles.cardContent}>
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
@@ -93,11 +93,6 @@ export default function Home({ allPostsData }) {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
         }
 
         .title a {

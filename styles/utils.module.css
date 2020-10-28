@@ -46,27 +46,50 @@
 
 .lightText {
   color: #999;
+  font-size: 0.6rem;
 }
 
 .excerpt {
   color: black;
   font-size: 0.8rem;
   line-height: normal;
+   font-style: italic;
+}
+@media only screen and (min-width: 600px) {
+  .cardHolder {
+    flex-flow: column wrap;
+    justify-content: center;
+  }  
+  .card {width: 80%; }
+}
+@media only screen and (min-width: 768px) {
+  .cardHolder {
+    flex-flow: row wrap; 
+    justify-content: flex-start;
+  }
+  .card {width: 40%; }
 }
 
+@media only screen and (min-width: 992px) {
+  .card {width: 25%;}
+}
 .cardHolder {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+}
+
+.cardContent a{
+  align-self: center;
 }
 
 .card {
   display: flex;
-  width: 25%;
   margin: 1rem;
-  border: 1px black solid;
+  border: 1px hsla(0, 0, 0, 0) solid;
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: rgb(250, 255, 255);
   opacity: 1;
+  flex-direction: column;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
