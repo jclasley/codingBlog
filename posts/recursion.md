@@ -9,6 +9,6 @@ It took many, many attempts to wrap my head around the recursive `return` statem
 
 I thought, "Surely it's not that simple." It is. It is that simple. Things began clicking into place, and I was able to accomplish the tasks set out. However, I'm still working on re-implementing the `JSON.parse` function, and it has not been fun. Still learning all about _recursive descent parsers_ and what that actually means. Check in later to see any progress updates.
 
-- [x] Reimplement `getElementsByClassName`
-- [x] Reimplement `JSON.stringify`
-- [ ] Reimplement `JSON.parse`
+- ✅ Reimplement `getElementsByClassName`
+- ✅ Reimplement `JSON.stringify`
+- ⬜ Reimplement `JSON.parse`
