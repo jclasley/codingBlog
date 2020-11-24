@@ -1,9 +1,8 @@
 ---
-title: 'Recursively cursing'
-date: '2020-10-28'
+title: 'A Brief Intro to Data Structures'
+date: '2020-11-24'
 ---
 ### Linked lists, and graphs, and hash tables, oh my!
-
 As a self-taught developer, there are bound to be gaps in my knowledge base. One of the reasons I started a bootcamp was to be able to fill in those gaps. It's hard to go out and learn something when you don't even know that you don't know it in the first place. It's particularly hard when you don't even know that the concept exists. Enter data structures. 
 
 On their face, data structures are a way to organize data that clarifies the relationship between data points and/or optimizes the data for a particular function. When we consider the ways in which we interact with data, we find that there are four functions we can perform: *create, read, update, delete* (commonly referred to as CRUD). To being our discussion of data structures, we will first introduce and briefly touch on **time complexity**. 
