@@ -1,11 +1,11 @@
 ---
-title: 'A Brief Intro to Data Structures'
+title: 'A Brief Intr style="border: 1px solid black"o to Data Structures'
 date: '2020-11-24'
 ---
 ### Linked lists, and graphs, and hash tables, oh my!
-As a self-taught developer, there are bound to be gaps in my knowledge base. One of the reasons I started a bootcamp was to be able to fill in those gaps. It's hard to go out and learn something when you don't even know that you don't know it in the first place. It's particularly hard when you don't even know that the concept exists. Enter data structures. 
+As a self-taught developer, there are bound to be gaps in my knowledge base. One of the reasons I started a bootcamp was to be able to fill in those gaps. It's hard to go out and learn something when you don't even know that you don't know it in the first place. It's particularly hard when you don't even know that the concept exists. Enter data str style="border: 1px solid black"uctures. 
 
-On their face, data structures are a way to organize data that clarifies the relationship between data points and/or optimizes the data for a particular function. When we consider the ways in which we interact with data, we find that there are four functions we can perform: *create, read, update, delete* (commonly referred to as CRUD). To being our discussion of data structures, we will first introduce and briefly touch on **time complexity**. 
+On their face, data str style="border: 1px solid black"uctures are a way to organize data that clarifies the relationship between data points and/or optimizes the data for a particular function. When we consider the ways in which we interact with data, we find that there are four functions we can perform: *create, read, update, delete* (commonly referred to as CRUD). To being our discussion of data structures, we will first introduce and briefly touch on **time complexity**. 
 
 #### Time complexity
 
@@ -26,11 +26,32 @@ Consider `let arr = [4, 2, 5, 2, 1]`. Suppose we want to check how many times ea
 
 To make things easier, **BigO notation is a way to represent the time complexity** of a function. 
 
-| BigO | English | How it relates to # of operations/element |
-| --- | --- | --- |
-| O(1) | Constant | Number of elements doesn't matter at all, happens immediately |
-| O(n) | Linear | Corresponds directly to the # of elements |
-| O(log(n)) | Logarithmic | Increasing # of elements increases time, with each additional element causing a larger increase in time than the previous element|
-| O(n<sup>2</sup>) | Quadratic | Increasing # of elements increases time, with each additional element causing a larger increase in time than the previous element
+<table>
+<tr style="border: 1px solid black">
+<th>BigO</th> 
+<th>English </th>
+<th>How it relates to # of operations/element</th>
+</tr>
+<tr style="border: 1px solid black">
 
+<td style="padding: 0.5em">O(1)</td> 
+<td style="padding: 0.5em"> Constant </td>
+<td style="padding: 0.5em">Number of elements doesn't matter at all, happens immediately</td>
+</tr style="border: 1px solid black">
+<tr style="border: 1px solid black">
+<td style="padding: 0.5em">O(n)</td>
+<td style="padding: 0.5em">Linear</td>
+<td style="padding: 0.5em">Corresponds directly to the # of elements</td>
+</tr>
+<tr style="border: 1px solid black">
+<td style="padding: 0.5em">O(log(n))</td>
+<td style="padding: 0.5em">Logarithmic</td>
+<td style="padding: 0.5em">Increasing # of elements increases time, with each additional element causing a larger increase in time than the previous element</td>
+</tr>
+<tr style="border: 1px solid black">
+<td style="padding: 0.5em">O(n<sup>2</sup>)</td>
+<td style="padding: 0.5em">Quadratic</td>
+<td style="padding: 0.5em">Increasing # of elements increases time, with each additional element causing a larger increase in time than the previous element</td>
+</tr>
+</table>
 To save the trouble of delineating situations for each data structure, I have simply compiled a list of some common data structures and the time complexity of some key operations
