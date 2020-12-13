@@ -12,4 +12,4 @@ Comparing an ES6 class declaration to the same class in pseudoclassical style sh
 ##### Pseudoclassical
 <script async src="//jsfiddle.net/jlasley/L71s4qpu/1/embed/js/"></script>
 ##### ES6
-<script async src="//jsfiddle.net/jlasley/L71s4qpu/10/embed/js/"></script>
+<script async src="//jsfiddle.net/jlasley/L71s4qpu/16/embed/js/"></script>

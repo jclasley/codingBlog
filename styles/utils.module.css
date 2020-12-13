@@ -15,6 +15,7 @@
 }
 
 .headingLg {
+  font-family: 'Lobster', cursive;
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 0.5rem 0;
@@ -49,12 +50,6 @@
   font-size: 0.6rem;
 }
 
-.excerpt {
-  color: black;
-  font-size: 0.8rem;
-  line-height: normal;
-   font-style: italic;
-}
 @media only screen and (min-width: 600px) {
   .cardHolder {
     flex-flow: column wrap;
@@ -80,6 +75,8 @@
 
 .cardContent a{
   align-self: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
 }
 
 .card {
@@ -92,4 +89,12 @@
   opacity: 1;
   flex-direction: column;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.excerpt {
+  color: rgb(107, 100, 100);
+  font-size: 0.8rem;
+  line-height: normal;
+  /* font-style: italic; */
+  font-family: 'Courgette', cursive;
 }
