@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import Date from '../components/date'
-import linkHeaderStyles from '../styles/linkHeader.module.css'
+import Linkbar from '../components/linkbar.js'
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from '../lib/posts'
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -12,6 +13,7 @@ export async function getStaticProps() {
       allPostsData
     }
   }
+  
 }
 
 export default function Home({ allPostsData }) {
@@ -29,11 +31,24 @@ export default function Home({ allPostsData }) {
             Jon's Journeys
           </h3>
         </header>
-       <section className={`linkbar ${linkHeaderStyles.container}`}>
-          <Link href='/projects'><a>Projects</a></Link>
-          <Link href='https://www.github.com/jclasley'><a>Github</a></Link>
-          <Link href='/about'><a>About</a></Link>
-      </section>
+       <Linkbar links={[
+         {
+           src: '/algo',
+           name: 'Algo a Day'
+         },
+         {
+          src: '/projects',
+          name: 'Projects'
+         },
+         {
+           src: 'https://www.github.com/jclasley',
+           name: 'Github'
+         },
+         {
+           src: '/about',
+           name: 'About'
+         }
+       ]} />
 
       <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog posts</h2>
