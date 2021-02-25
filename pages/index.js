@@ -51,6 +51,12 @@ export default function Home({ allPostsData }) {
        ]} />
 
       <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+       <h2 className={utilStyles.headingLg}>A note from me</h2>
+       <div>
+         While I focus on the job hunt, I will not be updating my blog and will instead put all my efforts into my <a href='/algo' style={{color: 'blue'}}>Algorithm a Day</a> series. Thank you for visiting my site, and I hope you enjoy watching my journey as a software engineer!
+       </div>
+      </section>
+      <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog posts</h2>
         <div className={utilStyles.cardHolder}>
           {allPostsData.map(({ id, date, title, excerpt }) => (
