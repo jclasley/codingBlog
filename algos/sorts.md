@@ -28,7 +28,7 @@ I opt for the recursive option here, simply because it's fewer lines and makes f
 
 ##### Clojure
 
-```clj
+```clojure
 (defn selectionSort ([arr] (selectionSort arr []))
    ([arr sortedArr]
     (if (> (count arr) 0)

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Date from '../components/date'
 import Linkbar from '../components/linkbar.js'
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from '../lib/posts'
+import { getSortedPostsData } from '../lib/posts';
 
 
 export async function getStaticProps() {

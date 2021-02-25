@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getSortedAlgoData } from '../lib/algos'
 import utilStyles from "../styles/utils.module.css";
 
+
 export async function getStaticProps() {
   const allAlgoData = getSortedAlgoData()
   return {

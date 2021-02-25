@@ -4,6 +4,7 @@ import Date from '../../components/date'
 import { getAllAlgoIds, getAlgoData } from '../../lib/algos'
 import utilStyles from '../../styles/utils.module.css'
 
+
 export default function Algo({ postData }) {
   return (
     <Layout>
