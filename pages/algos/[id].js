@@ -10,6 +10,7 @@ export default function Algo({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>

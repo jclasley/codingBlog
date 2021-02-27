@@ -30,4 +30,3 @@ yarn-error.log*
 .env.production.local
 
 # in build
-algos/traverseLL.md

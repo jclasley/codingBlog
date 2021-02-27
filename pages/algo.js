@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Link from 'next/link'
 import { getSortedAlgoData } from '../lib/algos'
 import utilStyles from "../styles/utils.module.css";
-
+import moment from 'moment';
 
 export async function getStaticProps() {
   const allAlgoData = getSortedAlgoData()
@@ -20,9 +20,10 @@ export default function Algo({ allAlgoData }) {
       <Head>
         <title>Jon's Journeys</title>
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
       </Head>
-      <Layout>
+      <Layout home>
         <h1>An Algo a Day</h1>
         <h3>Exploring algorithms in JavaScript, Clojure, and Go</h3>
         <div>
@@ -38,8 +39,10 @@ export default function Algo({ allAlgoData }) {
                     <a>{title}</a>
                   </Link>
                   <br />
-                  <small className={utilStyles.lightText}>
-                    {date}
+                  <small style={{
+                    color: "#999",
+                    fontSize: "0.6rem;"}}>
+                    {moment(date).fromNow()}
                   </small>
                   <br />
                   <p className={utilStyles.excerpt}>

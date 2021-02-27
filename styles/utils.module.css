@@ -1,3 +1,7 @@
+.highlighted-link {
+  color: light-blue;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -43,31 +47,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
+};
 
-.lightText {
+.smallText {
   color: #999;
   font-size: 0.6rem;
 }
 
-@media only screen and (min-width: 600px) {
-  .cardHolder {
-    flex-flow: column wrap;
-    justify-content: center;
-  }  
-  .card {width: 80%; }
-}
-@media only screen and (min-width: 768px) {
-  .cardHolder {
-    flex-flow: row wrap; 
-    justify-content: flex-start;
-  }
-  .card {width: 40%; }
-}
-
-@media only screen and (min-width: 992px) {
-  .card {width: 25%;}
-}
 .cardHolder {
   display: flex;
   flex-flow: row wrap;
@@ -77,9 +63,15 @@
   align-self: center;
   font-family: 'Amatic SC', cursive;
   font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.cardContent {
+  line-height: 1rem;
 }
 
 .card {
+  width: 100%;
   display: flex;
   margin: 1rem;
   border: 1px hsla(0, 0, 0, 0) solid;
@@ -89,7 +81,6 @@
   opacity: 1;
   flex-direction: column;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  width: 80%;
 }
 
 .excerpt {
@@ -97,5 +88,5 @@
   font-size: 0.8rem;
   line-height: normal;
   /* font-style: italic; */
-  font-family: 'Courgette', cursive;
+  font-family: 'Roboto', sans-serif;
 }
