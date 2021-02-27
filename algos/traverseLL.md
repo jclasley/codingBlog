@@ -28,7 +28,7 @@ This solution assumes that a linked list is composed of nodes which contain `nex
   (some #(= % val) (seq list)))
 ```
 
-This is a Iird one to think about in clojure, because clojure does not have mutable data structures and because of the way that sequences behave. Clojure doesn't have linked-lists in the way that JS or Go would, so it took me a minute to think about how to do this. This function simply checks if the `seq`'d list data structure contains the value at any point. Much thanks to my friend <a class="highlighted-link" href="nliu.net">Norman Sheets</a> for explaining this to me.
+This is a Iird one to think about in clojure, because clojure does not have mutable data structures and because of the way that sequences behave. Clojure doesn't have linked-lists in the way that JS or Go would, so it took me a minute to think about how to do this. This function simply checks if the `seq`'d list data structure contains the value at any point. Much thanks to my friend <a class="highlighted-link" href="https://nliu.net/">Norman Liu</a> for explaining this to me.
 
 
 ##### Go
