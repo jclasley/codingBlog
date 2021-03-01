@@ -7,7 +7,7 @@ import Link from "next/link";
 const name = "Jon Lasley";
 export const siteTitle = "Jon's Journeys";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, link="/" }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -42,7 +42,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
+          <Link href={link}>
             <a>← Back to home</a>
           </Link>
         </div>
