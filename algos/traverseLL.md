@@ -2,8 +2,8 @@
 title: 'Straight traversal of a linked list'
 date: '2021-02-24'
 ---
-
 Today's prompt is the straight traversal of a linked list. I will assume the prompt is: "Given a value, return the node if the value exists in the linked list, otherwise return null."
+<!-- end -->
 
 #### Approach
 

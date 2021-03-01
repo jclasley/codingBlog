@@ -1,0 +1,27 @@
+.background {
+  background-image: url('../patterns/green-vector.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.titleBacking {
+  border-radius: 1rem;
+  background-color: #3FA9CA;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px 2px lightslategray;
+}

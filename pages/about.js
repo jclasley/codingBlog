@@ -13,11 +13,16 @@ export default function About() {
           About Jon
         </h1>
         <div>
-          Hello and welcome! My name is Jon Lasley, and I'm currently a software engineering student with Hack Reactor. 
-          What started as purely a passion project has blossomed into a full-blown love of all things software-adjacent. I am overjoyed 
-          at the opportunity to learn as much as possible and grow as an engineer. 
-          This site is first and foremost a blog about all my experiences throughout the program. It's written using next.js, and I'm excited to
-          learn more as I progress! Check back later to see my progress.
+          Hello and welcome! My name is Jon Lasley, and I'm a software engineer who loves solving problems.
+          My love for software engineering started as a desire to automate my mundane job functions in VBA while in my previous career, turned into a passion project in C#, and is now a full-blown love of all things software.
+          <br />
+          <br />
+          I am overjoyed at the opportunity to learn as much as possible and grow as an engineer. My current language focuses are in JavaScript, Clojure, and Go. I am having a blast learning Clojure and Go, as they are very different from my most mastered language, JavaScript.
+          <br />
+          I love to find clean and beautiful solutions to difficult and messy problems. Learning and growing as an engineer is what keeps me coming back day after day and what fuels my passion.
+          <br />
+          <br />
+          This site started as a blog to detail my experience through a software engineering immersive, but has transitioned into a learning and educational platform, focused mainly on my <a href='/algo'>Algo a Day series</a>. It's written using next.js, and I've thoroughly enjoyed the experience of creating a site using it, as compared to the messiness that is the traditional React, Express, and Webpack stack! Check back later to see my progress.
         </div>
       </Layout>
     </>

@@ -16,14 +16,12 @@ export default function Layout({ children, home }) {
           content="Jon Lasley's blog on the adventures through Hack Reactor's SEI bootcamp, as well as side projects along the way"
         />
         <meta name="og:title" content={siteTitle} />
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
-      <header className={styles.header}>
-        {home ? (
+      {home || (
           <>
-          </>
-        ) : (
-          <>
+          <div className={utilStyles.image}>
             <Link href="/">
               <a>
                 <img
@@ -38,9 +36,9 @@ export default function Layout({ children, home }) {
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
+          </div>
           </>
         )}
-      </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

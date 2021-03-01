@@ -2,6 +2,9 @@
 title: 'Sorting algorithms'
 date: '2021-02-23'
 ---
+There are a multitude of sorting algorithms, each using a different approach for modifying some list such that lower values are before higher values.
+<!-- end -->
+For the purposes of the algorithm, we will assume that all values are numeric, and a lower value is a value closer to negative infinity. However, note that sorting in this manner is only valuable given the above constraints, and that many `sort`s provide an option to use a custom sorting function, which often evaluates to a numeric value for use in sorting.
 
 Because of the sheer number of different sorting algorithms out there, I'm going to do a few of these a day. Today we are looking at [selection sort](#Selection-sort), [bubble sort](#Bubble-sort), and [insertion sort](#insertion-sort).
 

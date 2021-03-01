@@ -3,10 +3,25 @@
   grid-template: 1fr / repeat(4, 1fr);
   width: 100%;
   justify-items: center;
-  margin-top: 3rem;
-  top: 1rem;
+  background: #B1F6CB;
+  position: sticky;
+  top: 0;
+}
+
+.container span{
+  margin: auto;
+  height: 80%;
+  width: 100%;
+}
+.mid {
+  border-left: 4px dotted white;
 }
 
 .container a{
-  color: black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3FA9CA;
+  text-align: center;
 }
+

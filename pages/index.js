@@ -1,10 +1,11 @@
+import Header from '../components/header';
 import Head from "next/head";
 import Link from "next/link";
 import Date from '../components/date'
 import Linkbar from '../components/linkbar.js'
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from '../lib/posts';
-
+import moment from 'moment';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -25,13 +26,7 @@ export default function Home({ allPostsData }) {
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
       </Head>
-      
-     
-        <header className='title'>
-          <h3>
-            Jon's Journeys
-          </h3>
-        </header>
+        <Header title="Jon's Journeys" />
        <Linkbar links={[
          {
            src: '/algo',
@@ -67,8 +62,8 @@ export default function Home({ allPostsData }) {
                   <a>{title}</a>
                 </Link>
                 <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
+                <small className={utilStyles.date}>
+                  {moment(date).fromNow()}
                 </small>
                 <br />
                 <p className={utilStyles.excerpt}>
@@ -82,7 +77,6 @@ export default function Home({ allPostsData }) {
 
       <style jsx>{`
         .container {
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;

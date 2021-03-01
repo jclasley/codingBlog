@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { getSortedAlgoData } from '../lib/algos'
 import utilStyles from "../styles/utils.module.css";
 import moment from 'moment';
+import Header from '../components/header';
+import Linkbar from '../components/linkbar';
+import { util } from 'prismjs';
 
 export async function getStaticProps() {
   const allAlgoData = getSortedAlgoData()
@@ -16,21 +19,40 @@ export async function getStaticProps() {
 
 export default function Algo({ allAlgoData }) {
   return (
-    <>
+    <div className="container">
       <Head>
         <title>Jon's Journeys</title>
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
       </Head>
-      <Layout home>
-        <h1>An Algo a Day</h1>
-        <h3>Exploring algorithms in JavaScript, Clojure, and Go</h3>
+      <Header title="Algo a Day" />
+      <Linkbar links={[
+        {
+          src: '/',
+          name: 'Home'
+        },
+        {
+          src: '/projects',
+          name: 'Projects'
+        },
+        {
+          src: 'https://www.github.com/jclasley',
+          name: 'Github'
+        },
+        {
+          src: '/about',
+          name: 'About'
+        }]
+       } />
+      <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h3 className={utilStyles.headingLg}>Exploring algorithms in JavaScript, Clojure, and Go</h3>
         <div>
           The goal of this project is to explore a different algorithm every day, try it out in JavaScript, Clojure, and Go, and record my experiences doing so. I will discuss use cases, constructing the algorithm in different languages, and things I learned throughout the experience.
         </div>
-        <h2>Algorithms</h2>
-        <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      </section>
+      <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={`${utilStyles.headingLg}`}>Algorithms</h2>
           <div className={utilStyles.cardHolder}>
             {allAlgoData.map(({ id, date, title, excerpt }) => (
               <div className={utilStyles.card} key={id}>
@@ -39,9 +61,7 @@ export default function Algo({ allAlgoData }) {
                     <a>{title}</a>
                   </Link>
                   <br />
-                  <small style={{
-                    color: "#999",
-                    fontSize: "0.6rem;"}}>
+                  <small className={utilStyles.date}>
                     {moment(date).fromNow()}
                   </small>
                   <br />
@@ -52,8 +72,7 @@ export default function Algo({ allAlgoData }) {
               </div>
             ))}
           </div>
-        </section>
-      </Layout>
-    </>
+      </section>
+    </div>
   )
 }
