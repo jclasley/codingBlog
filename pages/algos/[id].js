@@ -7,7 +7,7 @@ import utilStyles from '../../styles/utils.module.css'
 
 export default function Algo({ postData }) {
   return (
-    <Layout>
+    <Layout link="/algo">
       <Head>
         <title>{postData.title}</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
