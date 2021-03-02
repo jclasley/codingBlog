@@ -18,6 +18,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const configTag = () => {
+    global.dataLayer = global && global.dataLayer || [];
+    function gtag() { dataLayer.push(arguments) }
+    gtag('js', new global.Date());
+
+    gtag('config', 'G-S21C5QRQ4C');
+  }
   return (
     <div className="container">
       <Head>
@@ -25,6 +32,9 @@ export default function Home({ allPostsData }) {
         <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S21C5QRQ4C"></script>
+                {configTag()}
       </Head>
         <Header title="Jon's Journeys" />
        <Linkbar links={[
