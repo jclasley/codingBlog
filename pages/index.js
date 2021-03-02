@@ -1,7 +1,6 @@
 import Header from '../components/header';
 import Head from "next/head";
 import Link from "next/link";
-import Date from '../components/date'
 import Linkbar from '../components/linkbar.js'
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from '../lib/posts';
@@ -21,7 +20,7 @@ export default function Home({ allPostsData }) {
   const configTag = () => {
     global.dataLayer = global && global.dataLayer || [];
     function gtag() { dataLayer.push(arguments) }
-    gtag('js', new global.Date());
+    gtag('js', new Date());
 
     gtag('config', 'G-S21C5QRQ4C');
   }
