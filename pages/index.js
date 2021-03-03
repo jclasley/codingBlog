@@ -1,6 +1,7 @@
 import Header from '../components/header';
 import Head from "next/head";
 import Link from "next/link";
+import Date from '../components/date'
 import Linkbar from '../components/linkbar.js'
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from '../lib/posts';
@@ -17,13 +18,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const configTag = () => {
-    global.dataLayer = global && global.dataLayer || [];
-    function gtag() { dataLayer.push(arguments) }
-    gtag('js', new Date());
-
-    gtag('config', 'G-S21C5QRQ4C');
-  }
   return (
     <div className="container">
       <Head>
@@ -33,7 +27,9 @@ export default function Home({ allPostsData }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-S21C5QRQ4C"></script>
-                {configTag()}
+                <script>{
+                  
+                }</script>
       </Head>
         <Header title="Jon's Journeys" />
        <Linkbar links={[
