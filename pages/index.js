@@ -22,14 +22,6 @@ export default function Home({ allPostsData }) {
     <div className="container">
       <Head>
         <title>Jon's Journeys</title>
-        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
-        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S21C5QRQ4C"></script>
-                <script>{
-                  
-                }</script>
       </Head>
         <Header title="Jon's Journeys" />
        <Linkbar links={[

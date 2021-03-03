@@ -22,9 +22,8 @@ export default function Algo({ allAlgoData }) {
     <div className="container">
       <Head>
         <title>Jon's Journeys</title>
-        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-S21C5QRQ4C"></script> */}
+{/*          */}
       </Head>
       <Header title="Algo a Day" />
       <Linkbar links={[
