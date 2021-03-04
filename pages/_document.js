@@ -20,7 +20,7 @@ class MyDoc extends Document {
 
   gtag('config', 'UA-163152822-1');`}}></script>
           {/* <!-- End Google Tag Manager --> */}
-          
+
           {/* Google fonts */}
           <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet"></link>
@@ -37,4 +37,4 @@ class MyDoc extends Document {
   }
 }
 
-export default MyDocument;
+export default MyDoc;
