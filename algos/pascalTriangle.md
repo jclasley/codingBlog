@@ -34,4 +34,38 @@ This was a fun one to imagine, and whiteboarding definitely makes this quick. Ou
 
 If either the upper-left (`i-1`) or -right (`i`) elements don't exist (i.e. we are at the edges of the triangle), we simply don't add anything to what we have. There is an argument here to ignore those edges because the edges will always be a 1, but I like this solution because we can change the starting number given by the default parameter and see how that affects the triangle -- it would be the same as recursively multiplying each element in the triangle.
 
+<hr />
+
+After doing this solution and researching possible better ones, I came across this formula that gives the result in constant time: 
+
+```
+lineNumber! / ((lineNumber - i + 1)! * (i - 1)!)
+```
+
+where `i` is the position on the line. This **significantly** changes the problem and makes it a simple function call. I will put those answers below and won't provide an explanation, since they will both be simple loops.
+
 ```clojure
+(defn factorial [x]
+  (if (> x 1)
+    (* x (factorial (dec x)))
+    1))
+
+(defn get-tri [line i]
+  (/ (factorial line) (* (factorial (inc (- line i))) (factorial (dec i)))))
+```
+
+```go
+func factorial(x int) int {
+	if x > 1 {
+		return x * factorial(x - 1)
+	} else {
+		return 1
+	}
+}
+
+func tri(line, i int) int {
+	return factorial(line) / ( factorial(line - i + 1) * factorial(i - 1) )
+}
+```
+
+As you can see, most of the code is in creating the factorial function, as the retrieval of a triangular number is simply an algebraic equation. While this solution is fast and efficient, I didn't come up with it myself, which leaves a bitter taste in my mouth. Here's to hoping for a more thought-provoking challenge tomorrow!
