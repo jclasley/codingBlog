@@ -68,6 +68,8 @@ Since we want to know if the furthest left index is 0, which is falsy in JavaScr
 
 Clojure does not come with a built in `reduce-right` so we opt for a loop that decreases with each recursion. The same logic applies -- if the current index contains a number of jumps such that we can reach the previously calculated leftmost index, we reset the leftmost index to the current element and try again until we reach the beginning. We return the result of an equality comparing the leftmost index and 0.
 
+##### Go
+
 ```go
 func jumpGame(jumps []int) bool {
 	left := len(jumps) - 1
