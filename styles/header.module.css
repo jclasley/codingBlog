@@ -9,7 +9,7 @@
 
 .title {
   font-family: 'Lobster', cursive;
-  font-size: 80px;
+  font-size: 3rem;
   padding: 0.5rem 1rem;
   font-weight: 700;
   color: white;
@@ -19,7 +19,7 @@
 .titleBacking {
   border-radius: 1rem;
   background-color: #3FA9CA;
-  height: 80%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
