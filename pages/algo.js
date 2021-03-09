@@ -47,7 +47,7 @@ export default function Algo({ allAlgoData }) {
       <section className={`flexContainer ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h3 className={utilStyles.headingLg}>Exploring algorithms in JavaScript, Clojure, and Go</h3>
         <div>
-          The goal of this project is to explore a different algorithm every day, try it out in JavaScript, <strike>Clojure</strike> Lua, and Go, and record my experiences doing so. I will discuss use cases, constructing the algorithm in different languages, and things I learned throughout the experience.
+          The goal of this project is to explore a different algorithm every day, try it out in JavaScript, <strike>Clojure</strike> Lua, and Go, and record my experiences doing so. I will discuss use cases, constructing the algorithm in different languages, and things I learned throughout the experience.<br />
 
           Update: I have decided to no longer actively pursue Clojure as vigorously, because of the limited job opportunities for Clojurists. I still love the language and am learning it in my free time, but for the purposes of this blog I will be using Lua.
         </div>
