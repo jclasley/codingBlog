@@ -42,7 +42,7 @@ export default function Layout({ children, home, link="/" }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href={link}>
+          <Link href={link} prefetch={false}>
             <a>← Back to home</a>
           </Link>
         </div>

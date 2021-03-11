@@ -74,6 +74,8 @@ If there's a left node, push it to the queue. If there's a right node, push it t
 ##### Go
 
 ```go
+package main
+
 import (
 	"fmt"
 )
@@ -83,12 +85,13 @@ func main() {
 	t := &BinaryTree{value: 4}
 	t.addChild(2)
 	t.addChild(5)
-	t.addChild(3) // tree has same structure as in the JS example
-	fmt.Println(t.bfs(3, q)) // eval
-													 // eval
-													 // eval
-													 // eval
-													 // true
+	t.addChild(3)
+	fmt.Println(t.bfs(3, q)) 
+	// eval
+	// eval
+	// eval
+	// eval
+	// true
 }
 
 type BinaryTree struct {
@@ -118,6 +121,10 @@ type TreeQueue struct { // Go does not currently support generics, so we have to
 	_storage []*BinaryTree
 }
 
+func (q *TreeQueue) size() int {
+	return len(q._storage)
+}
+
 func (q *TreeQueue) enqueue(t *BinaryTree) {
 	q._storage = append(q._storage, t)
 }
@@ -145,7 +152,7 @@ func (t *BinaryTree) bfs(v int, q *TreeQueue) bool {
 			q.enqueue(t.right)
 		}
 	}
-	if (len(q._storage) > 0) {
+	if (q.size() > 0) {
 		return q.dequeue().bfs(v, q)
 	} else {
 		return false
