@@ -16,16 +16,55 @@ For both solutions, we have to create a binary search tree class. In JavaScript 
 ##### JS
 
 ```js
+function Tree(value) {
+  this.left = null;
+  this.right = null;
+  this.value = value;
+}
+
+Tree.prototype.addBranch = function (value) {
+  const branch = new Tree(value);
+  if (value < this.value && !this.left) {
+    this.left = branch;
+  } else if (value > this.value && !this.right) {
+    this.right = branch;
+  } else {
+    value > this.value ? this.right.addBranch(value) : this.left.addBranch(value);
+  }
+}
+
 Tree.prototype.bfs = function (value) {
   const queue = []; //FIFO
   return (function bf(node) {
-    console.count(); // to demonstrate that this is BFS
+    console.count('BFS'); // to demonstrate that this is BFS
     if (node.value === value) return true;
     if (node.left) queue.push(node.left);
     if (node.right) queue.push(node.right);
     return queue.length ? bf(queue.shift()) : false;
   })(this);
 }
+
+const t = new Tree(4);
+t.addBranch(2)
+t.addBranch(3)
+t.addBranch(5)
+// tree structure:
+
+/*
+     4
+   /  \
+  2    5
+   \
+    3
+*/
+// you can see from the structure that a DFS search for '3' would only execute 3 times: once at the root, once at '2', and finally once at '3'
+// a BFS search would execute 4 times: once at the root, once at '2', once at '5', and finally once at '3'
+console.log(t.bfs(3))
+/* BFS: 1
+BFS: 2
+BFS: 3
+BFS: 4
+true */
 ```
 
 We start by defining a queue as a simple array, and we will guarantee it's FIFO nature by pushing to the end and "pulling" with `shift` from the front. First, check if the search value is the same as the value on the current node. If not, check for the existence of children and pass them into the queue.
@@ -43,10 +82,13 @@ func main() {
 	q := &TreeQueue{}
 	t := &BinaryTree{value: 4}
 	t.addChild(2)
-	t.addChild(6)
-	t.addChild(3)
 	t.addChild(5)
-	fmt.Println(t.bfs(6, q))
+	t.addChild(3) // tree has same structure as in the JS example
+	fmt.Println(t.bfs(3, q)) // eval
+													 // eval
+													 // eval
+													 // eval
+													 // true
 }
 
 type BinaryTree struct {
@@ -89,6 +131,7 @@ func (q *TreeQueue) dequeue() *BinaryTree {
 }
 
 func (t *BinaryTree) bfs(v int, q *TreeQueue) bool {
+	fmt.Println("eval")
 	if t.value == v {
 		return true
 	}	
