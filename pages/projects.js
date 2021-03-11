@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Link from 'next/link'
 import Header from '../components/header'
-import Linkbar from '../components/Linkbar';
+import Linkbar from '../components/linkbar';
 
 export default function Projects() {
   return (
