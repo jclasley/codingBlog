@@ -11,7 +11,7 @@ A breadth-first search is used in a tree and is categorized by checking every no
 
 For each node at a level, check the node's value to see if it matches what we're looking for, then queue up the left and right children of the node. For simplicity we will use a binary tree, though this can be done with a regular tree as well.
 
-For both solutions, we have to create a binary search tree class. In JavaScript we can create a closure-scoped array and then treat it like a queue data-structure. However, as you'll see, the Go solution is a little more complicated, since you can't do nested functions in Go.
+For both solutions, we have to create a binary search tree class. In JavaScript we can create a closure-scoped array and then treat it like a queue data-structure. However, as you'll see, the Go solution is a little more complicated, since you can't do nested functions in Go. This means that we can't *really* do a closure-scoped slice and have to create an official Queue class (with a capital Q, which means it's official. Pretty fancy huh?)
 
 ##### JS
 
