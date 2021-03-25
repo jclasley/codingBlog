@@ -27,7 +27,7 @@ class MyDoc extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Courgette&family=Lobster&display=swap" rel="stylesheet"></link>
 
             {/* meta tags */}
-          <meta property="og:image" content="../public/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
+          <meta property="og:image" content="/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
 
         </Head>
         <body>
