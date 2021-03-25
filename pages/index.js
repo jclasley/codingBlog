@@ -21,6 +21,12 @@ export default function Home({ allPostsData }) {
   return (
     <div className="container">
       <Head>
+        {/* meta tags */}
+        <meta property="og:url" content="https://jonlasley.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jon's Journeys" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
         <title>Jon's Journeys</title>
       </Head>
         <Header title="Jon's Journeys" />
