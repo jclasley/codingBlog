@@ -38,7 +38,7 @@ export default function About() {
             My love for software engineering started as a desire to automate my mundane job functions in VBA while in my previous career, turned into a passion project in C#, and is now a full-blown love of all things software.
             <br />
             <br />
-            I am overjoyed at the opportunity to learn as much as possible and grow as an engineer. My current language focuses are in JavaScript, Clojure, and Go. I am having a blast learning Clojure and Go, as they are very different from my most mastered language, JavaScript.
+            I am overjoyed at the opportunity to learn as much as possible and grow as an engineer. My current language focuses are in JavaScript, Java, and Go. I am having a blast learning Java and Go, as they are very different from my most mastered language, JavaScript.
             <br />
             I love to find clean and beautiful solutions to difficult and messy problems. Learning and growing as an engineer is what keeps me coming back day after day and what fuels my passion.
             <br />
