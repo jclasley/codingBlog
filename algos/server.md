@@ -36,19 +36,17 @@ const server = http.createServer((req, res) => {
       res.write('Hello, World!')
     }
     res.end();
+    console.log('done');
   }
 
-  if (req.method === 'POST' && req.url.includes('/name')) {
-    try {
-      name = req.url.split('/')[2];
-      res.writeHead(201);
-      res.end();
-    } catch (err) {
-      res.writeHead(400);
-      res.write("Please include a name in the url")
-      res.end();
-    }
+  if (req.method === 'POST' && req.url.search(/^\/name\/\w+$/) !== -1) {
+    name = req.url.split('/')[2];
+    res.writeHead(201);
+    res.end()
   }
+
+  res.writeHead(404);
+  res.end();
 })
 
 server.listen(8080);
@@ -56,7 +54,7 @@ server.listen(8080);
 
 We start by importing the `http` package from Node and creating an empty name variable, which we will use to demonstrate how routes can be used to save information. We create a server with `http.createServer` and give it a function to use to handle routes. 
 
-The function takes in a request, which the client sends, and a response, which the server sends. The request is sent to a URL, which is under `req.url` and a method, which is under `req.method`. If the method is a "GET" and if the route is the root, we check if the name variable has any value, then send a response based on whether or not we have a `name`. If the method is a "POST" and if the route includes "/name" (this is **not** best practice and just for demonstration), we split off the what is after the "/name" and save that to our `name` variable. For example, `curl -X POST localhost:8080/name/Jon` will save `Jon` to the `name` variable.
+The function takes in a request, which the client sends, and a response, which the server sends. The request is sent to a URL, which is under `req.url` and a method, which is under `req.method`. If the method is a "GET" and if the route is the root, we check if the name variable has any value, then send a response based on whether or not we have a `name`. If the method is a "POST" and if the route matches our regex expression, we split off the what is after the "/name" and save that to our `name` variable. For example, `curl -X POST localhost:8080/name/Jon` will save `Jon` to the `name` variable.
 
 Note that we are explicitly writing the header with `res.writeHead()` and that the header is an HTTP code. We are also writing into the body of the response with `res.write()`. We have to end the response as well, because otherwise the connection remains open and nothing is sent back to the client. 
 
