@@ -56,7 +56,7 @@ We start by importing the `http` package from Node and creating an empty name va
 
 The function takes in a request, which the client sends, and a response, which the server sends. The request is sent to a URL, which is under `req.url` and a method, which is under `req.method`. If the method is a "GET" and if the route is the root, we check if the name variable has any value, then send a response based on whether or not we have a `name`. If the method is a "POST" and if the route matches our regex expression, we split off the what is after the "/name" and save that to our `name` variable. For example, `curl -X POST localhost:8080/name/Jon` will save `Jon` to the `name` variable.
 
-Note that we are explicitly writing the header with `res.writeHead()` and that the header is an HTTP code. We are also writing into the body of the response with `res.write()`. We have to end the response as well, because otherwise the connection remains open and nothing is sent back to the client. 
+Note that we are explicitly writing the header with `res.writeHead()` and that the header is an HTTP code. We are also writing into the body of the response with `res.write()`. We have to end the response as well, because otherwise the connection remains open and nothing is sent back to the client.
 
 Finally, we kick off the server with `server.listen(8080)`, which is the specific port that we want the server to listen on. Once we spin up this server by running the file, we can access it at `localhost:8080` or `127.0.0.1:8080` -- they're the same thing. The root address is `localhost:8080`, so simply making a request at this route either with `curl` or by a web browser will return whatever we put in `res.write()`.
 
