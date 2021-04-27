@@ -31,6 +31,14 @@ class MyDoc extends Document {
           <meta property="og:title" content="Jon's Journeys" />
           <meta property="og:description" content="" />
           <meta property="og:image" content="https://jonlasley.com/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
+      
+          {/* Twitter card tags */}
+          <meta name="twitter:card" content="summary_large_image">
+          <meta property="twitter:domain" content="jonlasley.com">
+          <meta property="twitter:url" content="https://jonlasley.com">
+          <meta name="twitter:title" content="Jon's Journeys">
+          <meta name="twitter:description" content="">
+          <meta name="twitter:image" content="https://jonlasley.com/images/Screen Shot 2021-03-25 at 2.24.14 PM.png">
         </Head>
         <body>
           <Main />
