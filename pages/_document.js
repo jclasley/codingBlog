@@ -30,7 +30,7 @@ class MyDoc extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Jon's Journeys" />
           <meta property="og:description" content="" />
-          <meta property="og:image" content="/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
+          <meta property="og:image" content="https://jonlasley.com/images/Screen Shot 2021-03-25 at 2.24.14 PM.png" />
         </Head>
         <body>
           <Main />
